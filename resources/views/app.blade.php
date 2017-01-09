@@ -42,7 +42,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="#" class="logo">
+    <a href="{{url('/')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>T</b>HN</span>
       <!-- logo for regular state and mobile devices -->
@@ -235,7 +235,7 @@
           <img src="{{asset('/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
         </div>
      	   <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>{{Auth::user()->name}}</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>

@@ -37,6 +37,11 @@ class PesananController extends Controller {
 		$pemesanan->save();
 		return redirect('/admin/pesanan');
 	}
+		public function destroy($id){
+			$pemesanan = Pemesanan::find($id);
+			$pemesanan->delete();
+			return redirect('/admin/pesanan');		
+		}
 
 
 

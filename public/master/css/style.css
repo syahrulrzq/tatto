@@ -43,7 +43,11 @@ h1,h2,h3,h4,h5,h6,p,label{
 .header-logo{
 	display:none;
 }
-/*----*/
+./*top-menu{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}*/
 .top-menu ul li a {
     position: relative;
     display: inline-block;
@@ -64,6 +68,7 @@ h1,h2,h3,h4,h5,h6,p,label{
 }
 /* Effect 15: scale down, reveal */
 .top-menu ul li a {
+  font-size: 2.5rem;
 	color: rgba(0,0,0,0.2);
 	text-shadow: none;
 }
@@ -84,10 +89,14 @@ h1,h2,h3,h4,h5,h6,p,label{
 }
 /*----*/
 .top-menu{
+  max-width: 1200px;
+  width: 100%;
+  margin:0 auto;
 	margin-top:2em;
 	  text-align: center;
 }
 .top-menu ul li{
+  padding: 0 30px;
 	display: inline-block;
 }
 .top-menu ul li  a:hover,.top-menu ul li.active a{

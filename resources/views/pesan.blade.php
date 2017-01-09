@@ -3,6 +3,7 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
+
     $('#modal_form').submit(function(e){
       // formData = new FormData($('#modal_form')[0]);
       e.preventDefault();
@@ -78,7 +79,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Nomor Telepon</label>
-                  <input name="telp" class="mask form-control" id="nomor_telepon" placeholder="Nomor Telepon" type="text" value="{{old('telp')}}">
+                  <input name="telp" class="form-control" id="nomor_telepon" placeholder="Nomor Telepon" type="text" value="{{old('telp')}}" data-inputmask='"mask": "9999-9999-9999"' data-mask>
                 </div>
                 
                <div class="form-group">

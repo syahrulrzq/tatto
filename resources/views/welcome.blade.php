@@ -40,11 +40,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="top-nav">
 					<span class="icon"><img src="master/images/menu.png" alt=""> </span>
-					<ul>
-						<li><a href="#services" class="scroll">Order</a></li>
-						<li><a href="#gallery"	 class="scroll">Gallery</a></li>
-						<li ><a href="#about" class="scroll">About</a> </li>
-						<li><a href="#contact" class="scroll">Contact</a></li>
+					<ul><li><a href="/pesan" class="scroll" data-hover="Order ">Order </a></li>
+						<li><a href="#gallery" class="scroll" data-hover="Gallery" >Gallery</a></li>
+						<li><a href="/order" class="scroll" data-hover="Cek Order">Cek Order</a></li>
+						<li ><a href="/admin/pesanan" class="scroll" data-hover="Admin">Admin</a> </li
 					</ul>
 						<!--script-->
 						<script>

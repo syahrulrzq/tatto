@@ -4,6 +4,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Http\Request;
+use Auth;
 
 class AuthController extends Controller {
 
@@ -33,6 +35,27 @@ class AuthController extends Controller {
 		$this->registrar = $registrar;
 
 		$this->middleware('guest', ['except' => 'getLogout']);
+	}
+
+	public function postLogin(Request $r)
+	{
+		if (Auth::attempt(['email'=>$r->input('email'),'password'=>$r->input('password')])) {
+			return redirect('admin/pesanan');
+		}
+		else {
+			return redirect('auth/login')->with('message','Email atau Password SALAH');
+		}
+	}
+
+	public function getLogin()
+	{
+		return view('auth.login');
+	}
+
+	public function getLogout()
+	{
+		Auth::logout();
+		return redirect('auth/login');
 	}
 
 }

@@ -21,7 +21,8 @@
     				<th>Nama Pemesan</th>
     				<th>Nomor Telepon</th>
             <th>Nomor Pemesanan</th>
-            <th>Action</th>
+            <th>Status</th>
+            <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -36,14 +37,22 @@
                       <td>{{$pesanan->no_pesanan}}</td>
                       <td>
                       @if($pesanan->status=='pending')
-                      <a href="/admin/pesanan/{{$pesanan->id}}/reject" onclick="return confirm('Apakah anda yakin ingin menolak pesanan?')" class="btn btn-danger">Tolak Pesanan</a>
-                      <a href="/admin/pesanan/{{$pesanan->id}}/accept" onclick="return confirm('Apakah anda yakin ingin menyetujui pesanan?')" class="btn btn-primary">Terima Pesanan</a>
+                      PENDING
                       @else
                       @if($pesanan->status=='rejected')
                       REJECTED
                       @elseif($pesanan->status=='accepted')
                       ACCEPTED
                       @endif
+                      @endif
+                      </td>
+                      <td>
+                      <a href="/admin/pesanan/{{$pesanan->id}}/destroy" onclick="return confirm('Apakah anda yakin ingin menyetujui pesanan?')" class="btn btn-primary">Hapus</a>
+                        @if($pesanan->status=='pending')
+                      <a href="/admin/pesanan/{{$pesanan->id}}/reject" onclick="return confirm('Apakah anda yakin ingin menolak pesanan?')" class="btn btn-danger">Tolak</a>
+                      <a href="/admin/pesanan/{{$pesanan->id}}/accept" onclick="return confirm('Apakah anda yakin ingin menyetujui pesanan?')" class="btn btn-primary">Terima</a>
+
+                      @else
                       @endif
                       </td>
                     </tr>
